@@ -12,11 +12,11 @@ class DQE():
 
     # check missing value
     def check_missing(self, data, column_name: str):
-        self.result = data[column_name][data[column_name].isnull()]
-        self.Rp = len(self.result)
-        self.Rt = len(data)
-        self.DQ = self.Rp / self.Rt
-        return self.DQ
+        result = data[column_name][data[column_name].isnull()]
+        Rp = len(result)
+        Rt = len(data)
+        DQ = Rp / Rt
+        return DQ
 
     # check range
     def check_range(self, data, column_name: str, min, max):
